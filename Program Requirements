@@ -1,0 +1,78 @@
+Castle Hill Gaming Pets App
+
+IMPORTANT: You have 48 hours to create the app and send the entire solution and associated files back.  
+Notes:
+1.	The App must run on a Windows 10 desktop environment without the need for any additional software (e.g. web server, database server, etc)
+2.	Only the C# .NET Framework libraries included as part of Visual Studio may be used. No outside libraries, NuGet packages, or other frameworks will be accepted.
+Requirements
+Create a C# application that allows you to feed and interact with a collection of pets you have acquired from a store. Below are the requirements for the application:
+User interface actions:
+1.	List pets in the store. 
+2.	Acquire pets from a pet store and put them into your collection.
+3.	Remove pets from your collection.
+4.	Feed the pets. Available foods:
+1.	Bacon Snack
+2.	Dry dog food
+3.	Tuna
+4.	Dry cat food
+5.	Water (if implementing Plant pet)
+6.	Plant food (if implementing Plant pet)
+7.	Fish food (if implementing Fish pet)
+5.	Interact with the pets. Interactions:
+1.	Pet
+2.	Rub Belly
+3.	Play
+4.	Ignore
+5.	Scold
+6.	Play Music (if implementing bonus pets)
+7.	Talk to them (if implementing bonus pets)
+8.	Tap on Glass (if implementing bonus pets)
+6.	Request and view the current state of your pets.
+Rules:
+1.	Must name pets when you get them from the store.
+2.	Feeding foods the pet does not like lowers their happiness by 2 and raises hunger by 2.
+3.	Interacting in a manner that the pet does not have a rule for (see below) lowers happiness by 2 and raises hunger by 2.
+4.	Over time if you do not feed your pets, they will lose happiness and increase hunger. (See pets below for info on timing)
+a.	You can decide if this happens in real time or is updated when you feed or interact with them next.
+5.	If a pet’s hunger level gets above the Max Hunger value or their Happiness gets to 0 or below, it will not interact with you until you have fed them enough to bring hunger below Max Hunger and Happiness above zero.
+
+Required Store Pets
+Dog – Starting Hunger Level 2, Starting Happiness 5, Max Hunger level 10, Max Happiness 10. Every 2 minutes gain 1 hunger and lose 1 happiness if not fed.
+	Liked Foods:
+o	Bacon Snack – Halves current hunger, +1 to happiness
+o	Dry Dog Food – Sets hunger to 0, +1 to happiness
+	Liked Interactions:
+o	Rub belly – +1 to hunger, +1 to happiness
+o	Play – +3 to hunger, +2 to happiness
+o	Scold – +2 to hunger, -2 to happiness
+
+Cat – Starting Hunger Level 2, Starting Happiness 4, Max Hunger level 8, Max Happiness 5. Every 2 minutes gain 1 hunger and lose 1 happiness if not fed.
+	Liked Foods:
+o	Tuna – Sets hunger to 0, +3 to happiness
+o	Dry Cat Food – Halves hunger, +1 to happiness
+	Liked Interactions:
+o	Pet – +1 to hunger, +1 to happiness. Randomly the cat will dislike this action which means the action will fall under Rule #3 above.
+o	Ignore – +1 to hunger, +2 to happiness
+o	Scold – +2 to hunger level, -2 to happiness
+Bonus Extras
+The following extras are not required but can be used to improve your application.
+	Additional app functionality:
+1.	Save pet state as things change so that the app can start back up in the same place when it is shutdown.
+2.	Implement the following pets:
+Bonus Store Pets
+Plant – Starting Hunger Level 5, Starting Happiness 2, Max Hunger level 6, Max Happiness 5. Every 1 minute gain 1 hunger and lose 1 happiness if not fed.
+	Liked Foods:
+o	Water – Halves current hunger, +1 to happiness
+o	Plant Food – Sets hunger to 0, +1 to happiness
+	Liked Interactions:
+o	Talk to them – +1 to hunger, +1 to happiness
+o	Play music – +1 to hunger, +2 to happiness
+o	Ignore – +3 to hunger, -3 to happiness
+Fish – Starting Hunger Level 2, Starting Happiness 2, Max Hunger level 5, Max Happiness 5. Every 3 minutes gain 1 hunger and lose 1 happiness if not fed.
+	Liked Foods
+o	Fish Food – Sets hunger to 0, +1 to happiness
+	Liked interactions: 
+o	Play music – +1 to hunger, +1 to happiness
+o	Talk to them – +1 to hunger, +1 to happiness
+o	Tap on glass – +3 to hunger level, - 2 to happiness
+
